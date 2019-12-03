@@ -15,7 +15,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var year: [String] = []
     var yearRecent: [String] = []
     var birth_date = 1, birth_month = 1, birth_year = 1950;
-    var present_date = 26, present_month = 11, present_year = 2019;
+    var present_date = 27, present_month = 11, present_year = 2019;
     @IBOutlet weak var dayRdataPicker: UIPickerView!
     @IBOutlet weak var monthRdataPicker: UIPickerView!
     @IBOutlet weak var yearRdataPicker: UIPickerView!
@@ -25,6 +25,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var ResultShowLbl: UILabel!
     @IBOutlet weak var monthDataPicker: UIPickerView!
     @IBOutlet weak var yearDataPicker: UIPickerView!
+    @IBAction func clearAll(_ sender: Any) {
+        ResultShowLbl.text = "Result"
+       // recentDateShowlbl.text = "DD-MM-YY"
+    
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -132,10 +137,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
 
-    @IBAction func clearAll(_ sender: Any) {
-        ResultShowLbl.text = "Result"
-        birthDateShowlbl.text = "DD-MM-YY"
-    }
+
     
     @IBAction func AgeCalculate(_ sender: Any) {
         
